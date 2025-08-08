@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medical Registration Form</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border: 2px solid #00bcd4;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00796b;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input[type=text],
+    input[type=password],
+    input[type=email],
+    input[type=number],
+    input[type=date],
+    input[type=url],
+    input[type=week],
+    input[type=month],
+    input[type=time],
+    input[type=search],
+    input[type=color],
+    input[type=range],
+    input[type=file],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #00acc1;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type=text]:focus,
+    input[type=password]:focus,
+    input[type=email]:focus,
+    input[type=number]:focus,
+    input[type=date]:focus {
+      border-color: #00796b;
+    }
+
+    .checkbox-group,
+    .radio-group {
+      margin-bottom: 20px;
+    }
+
+    input[type=checkbox],
+    input[type=radio] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+
+    input[type=submit],
+    input[type=reset],
+    input[type=button] {
+      padding: 12px 20px;
+      margin: 10px 5px 0 0;
+      border: none;
+      border-radius: 6px;
+      background-color: #00796b;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type=submit]:hover,
+    input[type=reset]:hover,
+    input[type=button]:hover {
+      background-color: #004d40;
+    }
+
+    .form-section {
+      margin-bottom: 25px;
+    }
+
+    .color-preview {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #ccc;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .image-preview {
+      display: block;
+      margin: 10px 0;
+      width: 100px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Medical Registration Form</h2>
+    <form action="#" method="POST" enctype="multipart/form-data">
+
+      <!-- Hidden Input -->
+      <input type="hidden" name="form_id" value="med_reg_2025">
+
+      <div class="form-section">
+        <label for="fullname">Full Name (Text):</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="password">Create Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="number" id="phone" name="phone" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+        <label>Gender:</label>
+        <div class="radio-group">
+          <input type="radio" name="gender" value="male" id="male"><label for="male">Male</label>
+          <input type="radio" name="gender" value="female" id="female"><label for="female">Female</label>
+          <input type="radio" name="gender" value="other" id="other"><label for="other">Other</label>
+        </div>
+
+        <label>Medical Services:</label>
+        <div class="checkbox-group">
+          <input type="checkbox" name="services" value="general" id="general"><label for="general">General Checkup</label><br>
+          <input type="checkbox" name="services" value="cardiology" id="cardiology"><label for="cardiology">Cardiology</label><br>
+          <input type="checkbox" name="services" value="dental" id="dental"><label for="dental">Dental</label>
+        </div>
+
+        <label for="profile-pic">Upload Profile Picture:</label>
+        <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+
+        <label for="color">Choose Favorite Color:</label>
+        <input type="color" id="color" name="color">
+
+        <label for="range">Pain Level (1 to 10):</label>
+        <input type="range" id="range" name="pain_level" min="1" max="10">
+
+        <label for="search">Search Department:</label>
+        <input type="search" id="search" name="search_dept">
+
+        <label for="website">Personal Website:</label>
+        <input type="url" id="website" name="website">
+
+        <label for="appointment-week">Preferred Week of Appointment:</label>
+        <input type="week" id="appointment-week" name="appointment_week">
+
+        <label for="appointment-month">Preferred Month of Appointment:</label>
+        <input type="month" id="appointment-month" name="appointment_month">
+
+        <label for="appointment-time">Preferred Time:</label>
+        <input type="time" id="appointment-time" name="appointment_time">
+
+        <label for="image">Click to Upload Scan (Optional):</label>
+        <input type="image" src="https://img.icons8.com/ios-filled/100/upload.png" alt="Upload Button" width="50" height="50">
+      </div>
+
+      <!-- Buttons -->
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+      <input type="button" value="Help">
+    </form>
+  </div>
+</body>
+</html>
